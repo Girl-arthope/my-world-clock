@@ -13,27 +13,29 @@
   <body>
     <div class="container">
       <h1>WORLD CLOCK</h1>
-      <select>
+
+      <select id="city">
         <option value="">Select a city...</option>
-        <option value="">London</option>
-        <option value="">Durban</option>
-        <option value="">Cape Town</option>
+        <option value="Asia/Dubai">Dubai</option>
+        <option value="Asia/Seoul">Seoul</option>
+        <option value="America/Cancun">Cancun</option>
       </select>
-
-      <div class="city" id="durban">
-        <div>
-          <h2>Durban 🇿🇦</h2>
-          <div class="date"></div>
+      <div id="cities">
+        <div class="city" id="durban">
+          <div>
+            <h2>Durban 🇿🇦</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
-      </div>
 
-      <div class="city" id="capetown">
-        <div>
-          <h2>CapeTown 🇿🇦</h2>
-          <div class="date"></div>
+        <div class="city" id="capetown">
+          <div>
+            <h2>CapeTown 🇿🇦</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
       </div>
     </div>
     <footer>
