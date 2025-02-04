@@ -11,19 +11,34 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-  //capetown
-  let capetownElement = document.querySelector("#capetown");
-  if (capetownElement) {
-    let capetownDateElement = capetownElement.querySelector(".date");
-    let capetownTimeElement = capetownElement.querySelector(".time");
-    let capetownTime = moment().tz("Africa/Johannesburg");
 
-    capetownDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    capetownTimeElement.innerHTML = capetownTime.format(
+  //tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
+
+    tokyoDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+
+  //sydney (fixed)
+  let sydneyElement = document.querySelector("#sydney");
+  if (sydneyElement) {
+    let sydneyDateElement = sydneyElement.querySelector(".date");
+    let sydneyTimeElement = sydneyElement.querySelector(".time");
+    let sydneyTime = moment().tz("Australia/Sydney"); // Corrected time zone
+
+    sydneyDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    sydneyTimeElement.innerHTML = sydneyTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
 }
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
